@@ -1,0 +1,1 @@
+FROM quay.io/purplebooth/stupid-twitter-bot
