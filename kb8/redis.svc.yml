@@ -15,4 +15,5 @@ spec:
       protocol: TCP
       targetPort: redis
   selector:
-    name: tgnames-redis
+    service: tgnames
+    type: redis

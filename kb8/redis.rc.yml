@@ -6,15 +6,19 @@ metadata:
     facing: worker
     service: tgnames
     type: redis
-  name: tgnames-redis
+  name: tgnames-redis-v1
 spec:
   replicas: 1
   selector:
-    name: tgnames-redis
+    service: tgnames
+    type: redis
+    version: v1
   template:
     metadata:
       labels:
-        name: tgnames-redis
+        service: tgnames
+        type: redis
+        version: v1
     spec:
       containers:
         -

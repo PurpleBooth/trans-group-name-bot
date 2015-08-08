@@ -6,15 +6,19 @@ metadata:
     facing: worker
     service: tgnames
     type: stupid-twitter-bot
-  name: tgnames-stpdbot
+  name: tgnames-stpdbot-v0
 spec:
   replicas: 1
   selector:
-    name: tgnames-stpdbot
+    service: tgnames
+    type: stupid-twitter-bot
+    version: v0
   template:
     metadata:
       labels:
-        name: tgnames-stpdbot
+        service: tgnames
+        type: stupid-twitter-bot
+        version: v0
     spec:
       containers:
         -
