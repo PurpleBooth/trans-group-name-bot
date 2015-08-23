@@ -46,7 +46,6 @@ spec:
       restartPolicy: Always
       volumes:
         -
-          gcePersistentDisk:
-            fsType: ext4
-            pdName: tgnames-redis-pv
+          persistentVolumeClaim:
+              claimName: tgnames-redis-pvc
           name: tgnames-redis-pv
